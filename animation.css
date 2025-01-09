@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+.wrapper .static-txt{
+  color: black;
+  font-size: 45px;
+  font-weight: bolder;
+  margin-top: 40px !important;
+}
+.wrapper .dynamic-txts{
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li{
+  color: rgba(219,138,222,1);
+  font-size: 45px;
+  font-weight: bolder;
+  position: relative;
+  top: 0px;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 90%;
+  width: 90%;
+  background: white !important;;
+  border-left: 3px solid rgba(219,138,222,1);
+  animation: typing 4s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
+
